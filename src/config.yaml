@@ -1,0 +1,20 @@
+db:
+  host: "localhost"
+  port: 27017
+  database_name: "russian_corpus"
+  collection_name: "pages"
+
+logic:
+  delay: 1.0
+  max_pages: 30000
+  exclude_prefixes:
+    - "https://dic.academic.ru/dic.nsf/enc/"
+    - "https://help.gramota.ru/"
+    - "https://www.gramota.tv/"
+
+targets:
+  - url: "https://dic.academic.ru/"
+    source_name: "Academic Dictionary"
+
+  - url: "https://gramota.ru/"
+    source_name: "Gramota.ru"
